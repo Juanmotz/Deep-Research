@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deep-research"
+version = "0.1.0"
+description = "Accuracy-first local research system"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pypdf>=4.0.0"
+]
+
+[project.scripts]
+deep-research = "deep_research.cli:main"
+deep-research-local-ai = "deep_research.local_ai:main"
+
+[tool.setuptools]
+packages = ["deep_research"]
